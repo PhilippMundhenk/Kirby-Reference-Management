@@ -1,6 +1,6 @@
 #Kirby Reference Management
 ##Quick Reference
-Add source: (source: PM2015 ulr:https://www.mundhenk.org)<br/>
+Add source: (source: PM2015 url:https://www.mundhenk.org)<br/>
 Add reference: (ref: PM2015)<br/>
 
 ##Installation
