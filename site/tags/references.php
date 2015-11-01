@@ -8,14 +8,22 @@ kirbytext::$tags['ref'] = array(
 
 kirbytext::$tags['source'] = array(
   'attr' => array(
-    'url'
+    'url',
+    'popup'
   ),
   'html' => function($tag) {
 	$returnVal='<div>';
 	$returnVal.='<a name="ref'.$tag->attr('source').'">['.$tag->attr('source').'] </a>';
 	$url=$tag->attr('url');
-	$returnVal.=$url;
-	$returnVal='</div>';
+	$returnVal.='<a href='.$url;
+	if (0 === strpos($tag->attr('popup'), 'yes')) {
+		$returnVal.=' target=_blank';	
+	}
+	else if (0 === strpos($tag->attr('popup'), 'true')) {
+		$returnVal.=' target=_blank';	
+	}
+	$returnVal.='>'.$url.'</a>';
+	$returnVal.='</div>';
 	return $returnVal;
   }
 );
