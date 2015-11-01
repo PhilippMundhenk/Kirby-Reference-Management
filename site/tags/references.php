@@ -11,9 +11,11 @@ kirbytext::$tags['source'] = array(
     'url'
   ),
   'html' => function($tag) {
-	$returnVal='<a name="ref'.$tag->attr('source').'">['.$tag->attr('source').'] </a>';
+	$returnVal='<div>';
+	$returnVal.='<a name="ref'.$tag->attr('source').'">['.$tag->attr('source').'] </a>';
 	$url=$tag->attr('url');
-	$returnVal=$returnVal.$url;
+	$returnVal.=$url;
+	$returnVal='</div>';
 	return $returnVal;
   }
 );
